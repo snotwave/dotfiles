@@ -6,6 +6,8 @@
 (tooltip-mode -1)
 (set-fringe-mode 10)
 
+(setq default-tab-width 4)
+
 (menu-bar-mode -1)
 (xterm-mouse-mode 1)
 
@@ -111,6 +113,10 @@
   :after evil
   :ensure t
   :config (evil-collection-init))
+
+(use-package evil-surround
+  :ensure t
+  :config (global-evil-surround-mode 1))
 
 ;;; tree
 (use-package neotree
@@ -256,7 +262,7 @@
  '(custom-safe-themes
    '("6fc9e40b4375d9d8d0d9521505849ab4d04220ed470db0b78b700230da0a86c1" "9ff2a63e7b1dea4bdec5c8ccce2816c7d5f137f0f8daae6e9dc3a5d9d7c95cba" "3f1dcd824a683e0ab194b3a1daac18a923eed4dba5269eecb050c718ab4d5a26" "3039a2b04f05e9e730f23b56a44b9f6c5b40a4eb0bbc0a4b79ddfe7195ee98fd" default))
  '(package-selected-packages
-   '(evil-collection latex-preview-pane elpy madhat2r-theme uwu-theme tangotango-theme utop darcula-theme timu-macos-theme yascroll neotree evil evil-mode slime-fancy slime-company company-quickhelp gnu-apl-mode dyalog-mode apl-mode zig-mode code-cells python-mode lsp-pyright flycheck-ocaml merlin-eldoc merlin dune tuareg slime forth-mode lsp-haskell haskell-mode company corfu-mode lsp-mode which-key rainbow-delimiters powerline ivy-rich)))
+   '(evil-surround evil-collection latex-preview-pane elpy madhat2r-theme uwu-theme tangotango-theme utop darcula-theme timu-macos-theme yascroll neotree evil evil-mode slime-fancy slime-company company-quickhelp gnu-apl-mode dyalog-mode apl-mode zig-mode code-cells python-mode lsp-pyright flycheck-ocaml merlin-eldoc merlin dune tuareg slime forth-mode lsp-haskell haskell-mode company corfu-mode lsp-mode which-key rainbow-delimiters powerline ivy-rich)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

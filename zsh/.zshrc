@@ -17,11 +17,11 @@ zstyle ':completion::complete:*' use-cache 1
 
 # ls Colors
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
-alias ls="ls --color=auto"
 
 # Aliases
 alias floorp="flatpak run one.ablaze.floorp"
-alias gentoo-update="emerge --sync && emerge -auDNv @world "
+alias gentoo-update="time (emerge --sync && emerge -auDNv @world)"
+alias ls="eza --color=always --long --git --icons=always --all --no-time"
 
 # opam configuration
 [[ ! -r /home/ix/.opam/opam-init/init.zsh ]] || source /home/ix/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
