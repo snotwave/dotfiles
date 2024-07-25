@@ -6,7 +6,7 @@ if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
 
-config.color_scheme = 'Ocean Dark (Gogh)'
+config.color_scheme = 'Abernathy'
 config.window_background_opacity = 0.9
 config.text_background_opacity = 0.75
 

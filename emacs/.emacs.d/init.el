@@ -177,6 +177,8 @@
   :after (slime company)
   :config (setq slime-company-completion 'fuzzy
                 slime-company-after-completion 'slime-company-just-one-space))
+(load (expand-file-name "~/Files/src_clisp/quicklisp/slime-helper.el"))
+(setq inferior-lisp-program "sbcl")
 
 (use-package forth-mode
   :commands (forth-mode))

@@ -5,7 +5,7 @@
 }
 
 window#waybar {
-    background-color: #16161c;
+    background-color: #131416;
     opacity: 0.9;
 } 
 
@@ -65,7 +65,7 @@ button:hover {
 }
 
 #mode {
-    background-color: #64727D;
+    background-color: #f4727D;
     border-bottom: 3px solid #ffffff;
 }
 
