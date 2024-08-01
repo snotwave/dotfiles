@@ -1,12 +1,12 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: FontAwesome, FiraCode;
-    font-size: 12pt;
+    font-size: 14pt;
 }
 
 window#waybar {
-    background-color: #131416;
-    opacity: 0.9;
+    background-color: #000000;
+    opacity: 0.8;
 } 
 
 window#waybar.hidden {
@@ -71,7 +71,7 @@ button:hover {
 
 #custom-separator {
     padding: 0 4px;
-    color: #fadad1;
+    color: #dddddd;
 }
 
 #clock,
@@ -91,7 +91,7 @@ button:hover {
 #scratchpad,
 #mpd {
     padding: 0 15px;
-    color: #fadad1;
+    color: #ffffff;
 }
 
 #window,
