@@ -1,0 +1,81 @@
+// -*- mode: jsonc -*-
+{
+    // "layer": "top", // Waybar at top layer
+    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 32, // Waybar height (to be removed for auto height)
+//    "width": 1856, // Waybar width
+    "spacing": 8, // Gaps between modules (4px)
+    // Choose the order of the modules
+    "modules-left":[
+	"clock#date",
+	"clock"
+    ],	
+    "modules-center": [
+	"idle_inhibitor"
+    ],
+    "modules-right": [
+	"pulseaudio",
+	"network",
+	"tray"
+    ],
+    "custom/separator": {
+        "format": "::",
+        "interval": "once",
+        "tooltip": false
+    },
+    "custom/end": {
+        "format": " ",
+        "interval": "once",
+        "tooltip": false
+    },
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+    "clock": {
+	"interval": 1,
+	"format": "{:%H:%M:%S}",
+	"tooltip": false
+    },
+    "clock#date": {
+    	"interval": 1,
+	"format": "{:%Y-%m-%d}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+    "network": {
+        "format-wifi":  " {essid}",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "idle_inhibitor": {
+	"format": "{icon}",
+	"tooltip": false,
+	"format-icons": {
+		"activated": "",
+		"deactivated": ""
+	},
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {volume}%",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+    "tray": {
+    	    "icon-size": 12,
+	    "spacing": 2
+}
+}

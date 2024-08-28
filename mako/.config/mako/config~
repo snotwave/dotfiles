@@ -1,0 +1,17 @@
+font=FiraCode 11
+text-alignment=left
+
+background-color=#00000088
+border-color=#000000
+
+margin=2
+padding=4
+
+border-radius=2
+border-size=0
+
+max-visible=5
+default-timeout=7500
+
+width=400
+height=128

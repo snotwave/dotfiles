@@ -1,0 +1,10 @@
+auto-reload         yes
+reload-time         15
+reload-threads      100
+wrap-scroll         yes
+text-width          120
+
+download-full-page  yes
+max-items           100
+
+browser             "readable %u | lynx --stdin"

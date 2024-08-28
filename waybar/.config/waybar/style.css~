@@ -1,0 +1,49 @@
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: FontAwesome, FiraCode;
+    font-size: 11pt;
+}
+
+window#waybar {
+    background-color: rgba(0, 0, 0, 0.01)
+
+} 
+
+window#waybar {
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+#custom-separator {
+    padding: 0 5px;
+    color: #dddddd;
+    background-color: #000000;
+    border-radius: 5px;
+
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#mpd {
+    padding: 0px 8px;
+    background: linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.6) 100%);
+    border-radius: 2px;
+    margin: 4px ;
+    color: #ffffff;
+}
+

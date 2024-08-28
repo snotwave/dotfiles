@@ -1,0 +1,182 @@
+# Variables
+
+## Keymap
+set $mod Mod4
+
+## Colors
+set $black1 #000000
+set $black2 #222222
+set $white1 #bebebe
+set $white2 #eeeeee
+set $foreground #bebebe
+set $background #000000
+set $opacity E0
+
+## Workspaces
+set $workspace1 "1"
+set $workspace2 "2"
+set $workspace3 "3"
+set $workspace4 "4"
+set $workspace5 "5"
+set $workspace6 "6"
+set $workspace7 "7"
+set $workspace8 "8"
+set $workspace9 "9"
+set $workspace10 "10"
+
+## Apps
+set $terminal wezterm
+set $browser flatpak run one.ablaze.floorp
+set $discord discord
+set $filebrowser ranger
+set $quicklaunch dmenu_run -fn 'FiraCode-12' -b 
+set $statusbar waybar
+set $lock 'swaylock --screenshots --effect-blur 7x5 --effect-vignette 0.5:0.5 --fade-in 0.2 --ring-color 00000000 --key-hl-color bebebebe'
+
+set $screenshot grim ~/Pictures/Screenshots/$(date +'%Y-%m-%d-%H:%M:%S').png
+set $wallpaper ~/Pictures/Wallpapers/forest_7.jpg
+
+
+# Aesthetics
+
+## Color Setup		border	bg	text	indi	childborder
+client.focused		$black1	$white2 $white2	$white2
+client.focused_inactive	$black1	$black2	$white2	#3C3C3C
+client.unfocused	$black1	$black2	$white2	#3C3C3C
+
+## Window Borders
+default_border pixel 1
+default_floating_border pixel 1
+smart_borders on
+
+## Swayfx
+corner_radius 2
+default_dim_inactive 0.15
+dim_inactive_colors.unfocused #000000FF
+
+## Font
+font pango:DejaVu Sans Mono 12
+
+# Keybindings
+
+## Window
+
+bindsym $mod+Shift+q kill
+
+### Split
+bindsym $mod+h split h
+bindsym $mod+v split v
+
+### Focus
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+### Move Focused
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+### Resize
+mode "resize" {
+     bindsym Left resize shrink width 10ppt
+     bindsym Down resize grow height 10ppt
+     bindsym Up resize shrink height 10ppt
+     bindsym Right resize grow width 10ppt
+
+     bindsym Return mode "default"
+     bindsym Escape mode "default"
+     bindsym $mod+r mode "default"
+}
+bindsym $mod+r mode "resize"
+
+### Misc
+bindsym $mod+f fullscreen toggle
+
+### Apps
+bindsym $mod+Return exec $terminal
+bindsym $mod+Shift+f exec $browser
+bindsym $mod+Shift+d exec $discord
+bindsym $mod+Shift+x exec $terminal -e $filebrowser
+bindsym $mod+Shift+s exec $screenshot
+bindsym $mod+d exec $quicklaunch
+
+## Workspace
+
+### Switch Workspace
+bindsym $mod+1 workspace $workspace1
+bindsym $mod+2 workspace $workspace2
+bindsym $mod+3 workspace $workspace3
+bindsym $mod+4 workspace $workspace4
+bindsym $mod+5 workspace $workspace5
+bindsym $mod+6 workspace $workspace6
+bindsym $mod+7 workspace $workspace7
+bindsym $mod+8 workspace $workspace8
+bindsym $mod+9 workspace $workspace9
+bindsym $mod+0 workspace $workspace10
+
+### Send to Workspace
+bindsym $mod+Shift+1 move container to workspace $workspace1  
+bindsym $mod+Shift+2 move container to workspace $workspace2
+bindsym $mod+Shift+3 move container to workspace $workspace3
+bindsym $mod+Shift+4 move container to workspace $workspace4
+bindsym $mod+Shift+5 move container to workspace $workspace5
+bindsym $mod+Shift+6 move container to workspace $workspace6
+bindsym $mod+Shift+7 move container to workspace $workspace7
+bindsym $mod+Shift+8 move container to workspace $workspace8
+bindsym $mod+Shift+9 move container to workspace $workspace9
+bindsym $mod+Shift+0 move container to workspace $workspace10
+
+## Misc
+
+### Audio
+bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -2%
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +2%
+bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
+### Backlight
+bindsym XF86MonBrightnessDown exec xbacklight -dec 4
+bindsym XF86MonBrightnessUp exec xbacklight -inc 8
+
+### System
+set $mode_system :: (l) lock :: (e) logout :: (s) suspend :: (r) reboot :: (S) shutdown :: (R) UEFI ::
+mode "$mode_system" {
+     bindsym l exec $lock, mode "default"
+     bindsym e exit
+     bindsym s exec systemctl suspend, mode "default"
+     bindsym r exec systemctl reboot, mode "default"
+     bindsym Shift+s exec systemctl poweroff -i, mode "default"
+     bindsym Shift+r exec systemctl reboot --firmware-setup, mode "default"
+
+     bindsym Return mode "default"
+     bindsym Escape mode "default"
+}
+bindsym $mod+Shift+e mode "$mode_system"
+
+### Sway-Specific
+bindsym $mod+Shift+c reload
+bindsym $mod+p exec swaymsg bar mode toggle
+
+# Autoexec
+
+## Lock
+exec swayidle -w \
+	timeout	600	$lock \
+	timeout	1200	'swaymsg "output * dpms off"' \
+	resume		'swaymsg "output * dpms on"' \
+	before-sleep	$lock
+
+## Misc
+exec gentoo-pipewire-launcher & 
+output * bg $wallpaper fill
+
+## Waybar Config
+bar {
+    swaybar_command $statusbar
+    position top
+}
+
+include ~/.config/sway/$(hostname)/*

@@ -1,0 +1,28 @@
+https://news.ycombinator.com/rss "~Hacker News" tech 
+
+https://security.gentoo.org/glsa/feed.rss "~Gentoo News" tech linux gentoo
+https://www.linuxjournal.com/node/feed tech linux 
+
+https://serokell.io/blog.rss.xml tech coding 
+https://planet.haskell.org/rss20.xml tech coding haskell
+
+http://www.ams.org/rss/jams.rss math "~Journal of the American Mathematical Society"
+
+https://rss.arxiv.org/rss/math.LO math arxiv logic "~arXiv: Symbolic Logic"
+https://rss.arxiv.org/rss/math.CT math arxiv logic "~arXiv: Category Theory"
+https://rss.arxiv.org/rss/cs.LG math arxiv ai "~arXiv: Machine Learning"
+https://rss.arxiv.org/rss/cs.LO math arxiv logic "~arXiv: Logic in Computer Science"
+
+https://eugenesrobinson.substack.com/feed "~Substack: Eugene Robinson" culture 
+https://amphetaminesulphate.substack.com/feed "~Substack: Amphetamine Sulphate" culture
+
+http://feeds.bbci.co.uk/news/world/us_and_canada/rss.xml news bbc us canada "~BBC News: US and Canada"
+http://feeds.bbci.co.uk/news/world/asia/rss.xml news bbc asia "~BBC News: Asia"
+http://feeds.bbci.co.uk/news/world/africa/rss.xml news bbc africa "~BBC News: Africa"
+http://feeds.bbci.co.uk/news/world/latin_america/rss.xml news bbc "latin america" "~BBC News: Latin America"
+http://feeds.bbci.co.uk/news/world/middle_east/rss.xml news bbc "middle east" "~BBC News: Middle East"
+
+https://www.spiegel.de/schlagzeilen/tops/index.rss news spiegel german "~Spiegel: Topmeldungen (de)"
+https://www.spiegel.de/ausland/index.rss news spiegel world german "~Spiegel: Ausland (de)"
+https://www.spiegel.de/kultur/index.rss news spiegel culture german "~Spiegel: Kultur (de)"
+https://www.spiegel.de/wissenschaft/index.rss news spiegel science german "~Spiegel: Wissenschaft (de)"
