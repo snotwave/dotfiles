@@ -31,10 +31,12 @@ set $discord discord
 set $filebrowser ranger
 set $quicklaunch dmenu_run -fn 'FiraCode-12' -b 
 set $statusbar waybar
-set $lock 'swaylock --screenshots --effect-blur 7x5 --effect-vignette 0.5:0.5 --fade-in 0.2 --ring-color 00000000 --key-hl-color bebebebe'
+set $lock 'swaylock -C .config/swaylock/config'
+	  
+set $editor emacs
 
 set $screenshot grim ~/Pictures/Screenshots/$(date +'%Y-%m-%d-%H:%M:%S').png
-set $wallpaper ~/Pictures/Wallpapers/forest_7.jpg
+set $wallpaper ~/Pictures/Wallpapers/!wallpaper.jpg
 
 
 # Aesthetics
@@ -97,6 +99,7 @@ bindsym $mod+f fullscreen toggle
 
 ### Apps
 bindsym $mod+Return exec $terminal
+bindsym $mod+Shift+v exec $editor
 bindsym $mod+Shift+f exec $browser
 bindsym $mod+Shift+d exec $discord
 bindsym $mod+Shift+x exec $terminal -e $filebrowser
