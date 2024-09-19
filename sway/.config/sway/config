@@ -29,14 +29,15 @@ set $terminal wezterm
 set $browser flatpak run one.ablaze.floorp
 set $discord discord
 set $filebrowser ranger
-set $quicklaunch dmenu_run -fn 'FiraCode-12' -b 
+set $quicklaunch wofi --show drun 
 set $statusbar waybar
 set $lock 'swaylock -C .config/swaylock/config'
-	  
+set $notif 'mako -c ~/.config/mako/config'
+
 set $editor emacs
 
 set $screenshot grim ~/Pictures/Screenshots/$(date +'%Y-%m-%d-%H:%M:%S').png
-set $wallpaper ~/Pictures/Wallpapers/!wallpaper.jpg
+set $wallpaper ~/Pictures/Wallpapers/wallpaper.jpg
 
 
 # Aesthetics
@@ -104,7 +105,7 @@ bindsym $mod+Shift+f exec $browser
 bindsym $mod+Shift+d exec $discord
 bindsym $mod+Shift+x exec $terminal -e $filebrowser
 bindsym $mod+Shift+s exec $screenshot
-bindsym $mod+d exec $quicklaunch
+bindsym $mod+Space exec $quicklaunch
 
 ## Workspace
 
@@ -167,7 +168,7 @@ bindsym $mod+p exec swaymsg bar mode toggle
 
 ## Lock
 exec swayidle -w \
-	timeout	600	$lock \
+	timeout	600	chayang -d 5 && $lock \
 	timeout	1200	'swaymsg "output * dpms off"' \
 	resume		'swaymsg "output * dpms on"' \
 	before-sleep	$lock
@@ -175,6 +176,7 @@ exec swayidle -w \
 ## Misc
 exec gentoo-pipewire-launcher & 
 output * bg $wallpaper fill
+exec $notif
 
 ## Waybar Config
 bar {
