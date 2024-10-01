@@ -187,6 +187,37 @@
   (require 'evil-org-agenda)
   (evil-org-agenda-set-keys))
 
+;;; undo support
+(use-package vundo
+  :commands (vundo)
+
+  :config
+  ;; Take less on-screen space.
+  (setq vundo-compact-display t)
+
+  ;; Better contrasting highlight.
+  (custom-set-faces
+    '(vundo-node ((t (:foreground "#808080"))))
+    '(vundo-stem ((t (:foreground "#808080"))))
+    '(vundo-highlight ((t (:foreground "#FFFF00")))))
+
+  ;; Use `HJKL` VIM-like motion, also Home/End to jump around.
+  (define-key vundo-mode-map (kbd "l") #'vundo-forward)
+  (define-key vundo-mode-map (kbd "<right>") #'vundo-forward)
+  (define-key vundo-mode-map (kbd "h") #'vundo-backward)
+  (define-key vundo-mode-map (kbd "<left>") #'vundo-backward)
+  (define-key vundo-mode-map (kbd "j") #'vundo-next)
+  (define-key vundo-mode-map (kbd "<down>") #'vundo-next)
+  (define-key vundo-mode-map (kbd "k") #'vundo-previous)
+  (define-key vundo-mode-map (kbd "<up>") #'vundo-previous)
+  (define-key vundo-mode-map (kbd "<home>") #'vundo-stem-root)
+  (define-key vundo-mode-map (kbd "<end>") #'vundo-stem-end)
+  (define-key vundo-mode-map (kbd "q") #'vundo-quit)
+  (define-key vundo-mode-map (kbd "C-g") #'vundo-quit)
+  (define-key vundo-mode-map (kbd "RET") #'vundo-confirm))
+
+(with-eval-after-load 'evil (evil-define-key 'normal 'global (kbd "C-M-u") 'vundo))
+
 ;;; tree
 (use-package neotree
   :config
@@ -274,6 +305,12 @@
 (load (expand-file-name "~/Files/src_clisp/quicklisp/slime-helper.el"))
 (setq inferior-lisp-program "sbcl")
 
+;;;; coq
+(use-package proof-general)
+(use-package company-coq
+  :hook (coq-mode . company-coq-mode))
+
+;;;; forth
 (use-package forth-mode
   :commands (forth-mode))
 
@@ -360,9 +397,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(c-basic-offset 4)
  '(package-selected-packages
-   '(org-sticky-header org-bullets evil-org auto-package-update zoom dashboard solaire-mode dimmer all-the-icons doom-themes smart-tabs-mode no-littering rust-mode evil-surround evil-collection latex-preview-pane elpy madhat2r-theme uwu-theme tangotango-theme utop darcula-theme timu-macos-theme yascroll neotree evil evil-mode slime-fancy slime-company company-quickhelp gnu-apl-mode dyalog-mode apl-mode zig-mode code-cells python-mode lsp-pyright flycheck-ocaml merlin-eldoc merlin dune tuareg slime forth-mode lsp-haskell haskell-mode company corfu-mode lsp-mode which-key rainbow-delimiters powerline ivy-rich))
- '(c-basic-offset 4))
+   '(company-coq proof-general org-sticky-header org-bullets evil-org auto-package-update zoom dashboard solaire-mode dimmer all-the-icons doom-themes smart-tabs-mode no-littering rust-mode evil-surround evil-collection latex-preview-pane elpy madhat2r-theme uwu-theme tangotango-theme utop darcula-theme timu-macos-theme yascroll neotree evil evil-mode slime-fancy slime-company company-quickhelp gnu-apl-mode dyalog-mode apl-mode zig-mode code-cells python-mode lsp-pyright flycheck-ocaml merlin-eldoc merlin dune tuareg slime forth-mode lsp-haskell haskell-mode company corfu-mode lsp-mode which-key rainbow-delimiters powerline ivy-rich)))
  
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -372,3 +409,6 @@
  )
 
 (put 'upcase-region 'disabled nil)
+;; ## added by OPAM user-setup for emacs / base ## 56ab50dc8996d2bb95e7856a6eddb17b ## you can edit, but keep this line
+(require 'opam-user-setup "~/.emacs.d/opam-user-setup.el")
+;; ## end of OPAM user-setup addition for emacs / base ## keep this line
