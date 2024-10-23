@@ -31,12 +31,15 @@ set $discord discord
 set $filebrowser ranger
 set $quicklaunch wofi --show drun 
 set $statusbar waybar
+set $systemmanager system-monitoring-center
+#set $systemmanager 'wezterm -e btm'
 set $lock 'swaylock -C .config/swaylock/config'
 set $notif 'mako -c ~/.config/mako/config'
 
 set $editor emacs
 
-set $screenshot grim ~/Pictures/Screenshots/$(date +'%Y-%m-%d-%H:%M:%S').png
+#set $screenshot grim ~/Pictures/Screenshots/$(date +'%Y-%m-%d-%H:%M:%S').png
+set $screenshot grim -g "`slurp`" ~/Pictures/Screenshots/$(date +'%Y-%m-%d--%H:%M:%S').png
 set $wallpaper ~/Pictures/Wallpapers/wallpaper.jpg
 
 
@@ -144,6 +147,9 @@ bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle && $
 ### Backlight
 bindsym XF86MonBrightnessDown exec xbacklight -dec 4
 bindsym XF86MonBrightnessUp exec xbacklight -inc 8
+
+### Task Manager
+bindsym $mod+Shift+Delete exec $systemmanager
 
 ### System
 set $mode_system :: (l) lock :: (e) logout :: (s) suspend :: (r) reboot :: (S) shutdown :: (R) UEFI ::
