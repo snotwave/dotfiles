@@ -1,4 +1,4 @@
-;; emacs customizations
+; emacs customizations
 ;;(setq inhibit-startup-message t)
 (require 'no-littering)
 
@@ -13,8 +13,6 @@
 (xterm-mouse-mode 1)
 
 (toggle-word-wrap)
-
-(visual-line-mode)
 
 (set-frame-font "Monaspace Neon 11" nil t)
 
@@ -51,6 +49,16 @@
 ;; packages
 
 ;;; move backup saves elsewhere
+(setq backup-directory-alist '(("." . "~/.emacs.d/backup"))
+  backup-by-copying t    ; Don't delink hardlinks
+  version-control t      ; Use version numbers on backups
+  delete-old-versions t  ; Automatically delete excess backups
+  kept-new-versions 20   ; how many of the newest versions to keep
+  kept-old-versions 5    ; and how many of the old
+)
+
+
+;;; declutter config folder
 (use-package no-littering)
 
 ;;; theme
@@ -238,7 +246,8 @@
   :commands (lsp lsp-deferred)
   :init (setq lsp-keymap-prefix "C-c l")
   :config (setq lsp-prefer-capf t)
-  (setq lsp-auto-configure t))
+  (setq lsp-auto-configure t)
+  (setq lsp-headerline-arrow ">>"))
 
 ;;;; lsp-doctor recommended optimiztions
 (setq gc-cons-threshold 100000000
@@ -265,8 +274,12 @@
 
 (use-package flycheck
   :ensure t
+  :config (global-flycheck-mode +1))
+
+;;;;; flycheck has been giving errors with haskell-mode
+(use-package flycheck-haskell
   :config
-  (add-hook 'after-init-hook #'global-flycheck-mode))
+  (add-hook 'haskell-mode-hook #'flycheck-haskell-setup))
 
 ;;;; 80 column rule
 (setq-default display-fill-column-indicator-column 79)
@@ -321,7 +334,6 @@
   :hook (haskell-mode . lsp)
   (haskell-mode . interactive-haskell-mode)
   )
-
 (use-package lsp-haskell)
 
 ;;;; LaTeX
@@ -398,15 +410,18 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(c-basic-offset 4)
+ '(inhibit-startup-screen t)
  '(package-selected-packages
-   '(company-coq proof-general org-sticky-header org-bullets evil-org auto-package-update zoom dashboard solaire-mode dimmer all-the-icons doom-themes smart-tabs-mode no-littering rust-mode evil-surround evil-collection latex-preview-pane elpy madhat2r-theme uwu-theme tangotango-theme utop darcula-theme timu-macos-theme yascroll neotree evil evil-mode slime-fancy slime-company company-quickhelp gnu-apl-mode dyalog-mode apl-mode zig-mode code-cells python-mode lsp-pyright flycheck-ocaml merlin-eldoc merlin dune tuareg slime forth-mode lsp-haskell haskell-mode company corfu-mode lsp-mode which-key rainbow-delimiters powerline ivy-rich)))
+   '(deldo lsp-haskell zoom company-coq proof-general org-sticky-header org-bullets evil-org auto-package-update dashboard solaire-mode dimmer all-the-icons doom-themes smart-tabs-mode no-littering rust-mode evil-surround evil-collection latex-preview-pane elpy madhat2r-theme uwu-theme tangotango-theme utop darcula-theme timu-macos-theme yascroll neotree evil evil-mode slime-fancy slime-company company-quickhelp gnu-apl-mode dyalog-mode apl-mode zig-mode code-cells python-mode lsp-pyright merlin-eldoc merlin dune tuareg slime forth-mode company corfu-mode lsp-mode which-key rainbow-delimiters powerline ivy-rich)))
  
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(vundo-highlight ((t (:foreground "#FFFF00"))))
+ '(vundo-node ((t (:foreground "#808080"))))
+ '(vundo-stem ((t (:foreground "#808080")))))
 
 (put 'upcase-region 'disabled nil)
 ;; ## added by OPAM user-setup for emacs / base ## 56ab50dc8996d2bb95e7856a6eddb17b ## you can edit, but keep this line

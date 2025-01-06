@@ -1,6 +1,7 @@
 ;;; lsp-haskell.el --- Haskell support for lsp-mode -*- lexical-binding: t; -*-
 
-;; Version: 1.1
+;; Package-Version: 20240921.2345
+;; Package-Revision: d229fdcd25a2
 ;; Package-Requires: ((emacs "27.1") (lsp-mode "3.0") (haskell-mode "16.1"))
 ;; Keywords: haskell
 ;; URL: https://github.com/emacs-lsp/lsp-haskell

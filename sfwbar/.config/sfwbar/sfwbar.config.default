@@ -21,7 +21,7 @@ function("SfwbarInit") {
   SetBarId "bar-0"
   SetLayer "bottom"
   SetExclusiveZone "auto"
-#  SetMonitor 
+#  SetMonitor "HDMI-A-1" 
 #  SetBarSize "bar1","800" 
 }
 
@@ -37,11 +37,12 @@ function("ToggleMaximize") {
 
 
 menu("winops") {
-  margin: 4px 0px;
+  margin: 0px 0px;
 
   background-color: rgb(0, 0, 0, 0.6);
   text-color: rgb(f, f, f, 1);
   
+  item(" Minimize", Minimize );
   item(" Close", Close );
 }
 
@@ -56,6 +57,7 @@ layout "sfwbar" {
     rows = 1
     icons = true 
     labels = false
+    sort = false
 #    filter = output
 #    filter_output = true
 #    filter = floating
@@ -66,11 +68,6 @@ layout "sfwbar" {
   label { 
   	css = "* { -GtkWidget-hexpand: true; }"
   }
-
-#  tray {
-#    rows = 1
-#  }
-
 
 }
 
@@ -85,9 +82,9 @@ window {
 }
 
 button {
-        margin: 4px 0px;
-	background:  linear-gradient(0deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.05) 100%);
-	border-radius: 8px;
+        margin: 0px 0px;
+	background:  linear-gradient(0deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0) 20%);
+	border-radius: 0px;
 	border: none;
 	box-shadow: none;
 }
@@ -107,6 +104,7 @@ button#taskbar_group_active image {
   min-height: 30px;
   min-width: 30px;
   margin: 0px;
+  
 }
 
 button#taskbar_group_active {
@@ -124,43 +122,53 @@ button#taskbar_normal grid {
   min-height: 0px;
 }
 
-button#taskbar_active image {
-  min-width: 50px;
-  min-height: 50px;
-
+button#taskbar_active image,
+button#taskbar_active:hover image{
+  min-width: 48px;
+  min-height: 48px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 2px;
+  padding-bottom: 0px;
 }
 
 button#taskbar_normal:hover image{
-  min-width: 44px;
-  min-height: 44px;
+  min-width: 42px;
+  min-height: 42px;
   padding-left: 3px;
   padding-right: 3px;
-  padding-top: 3px;
-  padding-bottom: 3px;
-
+  padding-top: 8px;
+  #padding-bottom: 2px;
 }
 
 button#taskbar_normal image{
-  min-width: 38px;
-  min-height: 38px;
-  padding-left: 6px;
-  padding-right: 6px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  min-width: 42px;
+  min-height: 42px;
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-top: 12px;
+  #padding-bottom: 4px;
+}
+
+button#taskbar_active image,
+button#taskbar_active:hover image,
+button#taskbar_normal:hover image,
+button#taskbar_normal image{
+  margin: 0px -3px;
 }
 
 button#taskbar_normal,
 button#taskbar_normal:hover,
 button#taskbar_active image{
-  -GtkWidget-hexpand: true;
+  -GtkWidget-hexpand: false;
 }
 
 button#taskbar_normal label,
 button#taskbar_active label,
 button#taskbar_normal:hover label {
-  -GtkWidget-hexpand: true;
+  -GtkWidget-hexpand: false;
   #-GtkWidget-halign: start;
-  padding: 0px 7px 0px 0px;
+  padding: 0px 0px 0px 0px;
 }
 
 button#taskbar_normal,

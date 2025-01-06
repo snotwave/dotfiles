@@ -122,7 +122,7 @@
       <action name="Execute" command="floorp" />
     </item>
     <item label=" Discord">
-      <action name="Execute" command="discord-canary" />
+      <action name="Execute" command="vesktop" />
     </item>
     <item label=" Emacs">
       <action name="Execute" command="emacs" />
@@ -131,7 +131,7 @@
 
   <menu id="config" label="Settings">
     <item label="󰗶 Manager">
-      <action name="Execute" command="wezterm -e bpytop" />
+      <action name="Execute" command="system-monitoring-center" />
     </item>
     <item label="󱋆 Display">
       <action name="Execute" command="wdisplays" />

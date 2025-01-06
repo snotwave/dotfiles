@@ -1,0 +1,43 @@
+#
+# These things are run when an Openbox X Session is started.
+# You may place a similar script in $HOME/.config/openbox/autostart
+# to run user-specific things.
+#
+
+# If you want to use GNOME config tools...
+#
+#if test -x /usr/lib/openbox/gnome-settings-daemon >/dev/null; then
+#  /usr/lib/openbox/gnome-settings-daemon &
+#elif which gnome-settings-daemon >/dev/null 2>&1; then
+#  gnome-settings-daemon &
+#fi
+
+# If you want to use XFCE config tools...
+#
+#xfce-mcs-manager &
+
+# Set the right monitor to the primary one
+xrandr --output DisplayPort-1 --primary --right-of HDMI-A-0
+
+# Launch Compositor
+xcompmgr >/dev/null 2>&1 &
+
+# Launch Dock
+polybar >/dev/null 2>&1 &
+cairo-dock -o >/dev/null 2>&1 &
+
+# Set Wallpaper
+feh --bg-fill ~/Pictures/Wallpapers/wallpaper.jpg >/dev/null 2>&1 &
+
+# Notifications
+dunst >/dev/null 2>&1 &
+
+# Screensaver?
+xscreensaver -no-splash &
+
+# Various Applications
+ckb-next >/dev/null 2>&1 &
+steam -silent >/dev/null 2>&1 &
+vesktop >/dev/null 2>&1 &
+rssguard >/dev/null 2>&1 &
+nicotine -s >/dev/null 2>&1 &

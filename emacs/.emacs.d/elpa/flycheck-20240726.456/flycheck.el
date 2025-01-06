@@ -10,7 +10,8 @@
 ;;             Bozhidar Batsov <bozhidar@batsov.dev>
 ;; URL: https://www.flycheck.org
 ;; Keywords: convenience, languages, tools
-;; Version: 35.0-snapshot
+;; Package-Version: 20240726.456
+;; Package-Revision: 7a6398ea3538
 ;; Package-Requires: ((emacs "26.1"))
 
 ;; This file is not part of GNU Emacs.

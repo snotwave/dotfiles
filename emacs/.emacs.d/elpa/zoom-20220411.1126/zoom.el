@@ -21,7 +21,8 @@
 ;; SOFTWARE.
 
 ;; Author: Andrea Cardaci <cyrus.and@gmail.com>
-;; Version: 0.2.4
+;; Package-Version: 20220411.1126
+;; Package-Revision: 2104abb07468
 ;; URL: https://github.com/cyrus-and/zoom
 ;; Package-Requires: ((emacs "24.4"))
 ;; Keywords: frames

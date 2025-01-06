@@ -35,5 +35,11 @@ swayidle -w \
 
 # Misc
 nm-applet >/dev/null 2>&1 &
+ckb-next >/dev/null 2>&1 &
 steam -silent >/dev/null 2>&1 &
-discord-canary >/dev/null 2>&1 &
+vesktop >/dev/null 2>&1 &
+rssguard >/dev/null 2>&1 &
+nicotine -s >/dev/null 2>&1 &
+
+# Set DP-2 as the primary monitor
+xrandr --output DP-2 --primary >/dev/null 2>&1 &
