@@ -16,6 +16,7 @@
     "modules-right": [
 	"pulseaudio",
 	"network",
+	"battery", 
 	"tray"
     ],
     "custom/separator": {
@@ -54,8 +55,20 @@
 	"tooltip": false,
 	"format-icons": {
 		"activated": "",
-		"deactivated": ""
+		"deactivated": ""
 	},
+    },
+    "battery": {
+    	       "states": {
+            		 "warning": 30,
+            		"critical": 15
+        	},
+        	"format": "{icon} {capacity}%",
+        	"format-charging": " {capacity}%",
+        	"format-plugged": " {capacity}%",
+        	"format-alt": "{time} {icon}",
+        	"format-full": " {capacity}%",
+        	"format-icons": ["", "", ""]
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
