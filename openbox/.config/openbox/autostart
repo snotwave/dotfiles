@@ -16,6 +16,9 @@
 #
 #xfce-mcs-manager &
 
+# Gentoo Specific: Launch Pipewire
+gentoo-pipewire-launcher >/dev/null 2>&1 & 
+
 # Set the right monitor to the primary one
 xrandr --output DisplayPort-1 --primary --right-of HDMI-A-0
 
@@ -37,7 +40,9 @@ xscreensaver -no-splash &
 
 # Various Applications
 ckb-next >/dev/null 2>&1 &
+cmst >/dev/null 2>&1 &
 steam -silent >/dev/null 2>&1 &
 vesktop >/dev/null 2>&1 &
 rssguard >/dev/null 2>&1 &
 nicotine -s >/dev/null 2>&1 &
+
