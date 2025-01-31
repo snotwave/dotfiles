@@ -1,0 +1,42 @@
+;; -*- emacs-lisp -*- <25/01/08 09:14:22 /home/ix/.emacs.d/var/tramp/persistency.el>
+;; Tramp connection history.  Don't change this file.
+;; Run `M-x tramp-cleanup-all-connections' instead.
+
+(((tramp-file-name "cache" nil nil nil nil nil nil)
+  ("tramp-version" "2.6.3"))
+ ((tramp-file-name "sudo" "root" nil "stinkbad" nil nil nil)
+  ("null-device" "/dev/null")
+  ("uname" "Linux 6.6.21-gentoo-dist")
+  ("locale" "LC_ALL=en_US.utf8")
+  ("test" "test")
+  ("remote-path"
+   ("/bin" "/usr/bin" "/sbin" "/usr/sbin" "/usr/local/bin" "/usr/local/sbin"))
+  ("pipe-buf" 4096)
+  ("remote-shell" "/bin/sh")
+  ("perl-file-spec" t)
+  ("perl-cwd-realpath" t)
+  ("perl" "\\perl")
+  ("file-exists" "test -e")
+  ("readlink" "\\readlink")
+  ("stat" "env QUOTING_STYLE=locale \\stat")
+  ("id" "/usr/bin/id")
+  ("uid-integer" 0)
+  ("uid-string" "root")
+  ("gid-integer" 0)
+  ("gid-string" "root")
+  ("groups-integer"
+   (0 1 2 3 4 6 10 11 26 27))
+  ("groups-string"
+   ("root" "bin" "daemon" "sys" "adm" "disk" "wheel" "floppy" "tape" "video"))
+  ("ln" "\\ln")
+  ("case-insensitive" nil)
+  ("~" "/root")
+  ("ls" "/bin/ls --color=never")
+  ("ls--quoting-style=literal --show-control-chars" "--quoting-style=literal --show-control-chars")
+  ("ls--dired" "--dired")
+  ("df-blocksize" 1)
+  ("df" "\\df --block-size=1 --output=size,used,avail")
+  ("bzr" nil)
+  ("git" "\\git")
+  ("hg" nil)
+  ("~root" "/root")))

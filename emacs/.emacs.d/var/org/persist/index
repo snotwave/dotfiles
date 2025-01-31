@@ -1,0 +1,9 @@
+((:container
+  ((elisp org-element--headline-cache)
+   (elisp org-element--cache))
+  :persist-file "78/9a3f26-86ac-4a27-a79e-769d0b414fe3" :associated
+  (:hash "8ae91e1ba15f6560c3c5170bea5de5a8" :file "/home/ix/Files/therapy.org" :inode 25320062)
+  :expiry 30 :last-access 1738292796.0382535 :last-access-hr "2025-01-30T22:06:36-0500")
+ (:container
+  ((index "3.1"))
+  :persist-file "a9/3f4406-126e-43ea-8781-913f4400b08f" :associated nil :expiry never :last-access 1738292898.1562815 :last-access-hr "2025-01-30T22:08:18-0500"))
