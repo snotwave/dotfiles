@@ -17,17 +17,17 @@
 #xfce-mcs-manager &
 
 # Gentoo Specific: Launch Pipewire
-gentoo-pipewire-launcher >/dev/null 2>&1 & 
-
-# Set the right monitor to the primary one
-xrandr --output DisplayPort-1 --primary --right-of HDMI-A-0
-
-# Launch Compositor
-xcompmgr >/dev/null 2>&1 &
+# gentoo-pipewire-launcher >/dev/null 2>&1 & 
 
 # Launch Dock
 polybar >/dev/null 2>&1 &
 cairo-dock -o >/dev/null 2>&1 &
+
+# Set the right monitor to the primary one
+xrandr --output DP-2 --primary --right-of HDMI-1
+
+# Launch Compositor
+xcompmgr >/dev/null 2>&1 &
 
 # Set Wallpaper
 feh --bg-fill ~/Pictures/Wallpapers/wallpaper.jpg >/dev/null 2>&1 &
@@ -35,14 +35,18 @@ feh --bg-fill ~/Pictures/Wallpapers/wallpaper.jpg >/dev/null 2>&1 &
 # Notifications
 dunst >/dev/null 2>&1 &
 
-# Screensaver?
-xscreensaver -no-splash &
-
 # Various Applications
-ckb-next >/dev/null 2>&1 &
-cmst >/dev/null 2>&1 &
+ckb-next --background >/dev/null 2>&1 &
+# cmst >/dev/null 2>&1 &
 steam -silent >/dev/null 2>&1 &
 vesktop >/dev/null 2>&1 &
-rssguard >/dev/null 2>&1 &
-nicotine -s >/dev/null 2>&1 &
+# rssguard >/dev/null 2>&1 &
+# nicotine -s >/dev/null 2>&1 &
+nm-applet >/dev/null 2>&1 &
+blueman-applet >/dev/null 2>&1 &
+
+# Screensaver?
+# xscreensaver -no-splash &
+xautolock -locker xlock -time 10 -notify 5 -notifier ~/Files/shell_scripts/lockscreen-notify.sh -detectsleep >/dev/null 2>&1 &
+
 

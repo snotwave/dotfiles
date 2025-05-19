@@ -237,10 +237,10 @@
     <default />
     <!-- Use a different terminal emulator -->
     <keybind key="W-Return">
-      <action name="Execute"> <command>wezterm</command></action>
+      <action name="Execute"> <command>alacritty</command></action>
     </keybind>
     <keybind key="W-space">
-      <action name="Execute"> <command>rofi -show drun</command></action>
+      <action name="Execute"> <command> rofi -show drun </command></action>
     </keybind>
     <keybind key="W-S-q">
       <action name="Close"/>
@@ -251,7 +251,7 @@
       </action>
     </keybind>
     <keybind key="W-S-Delete">
-      <action name="Execute"> <command>system-monitoring-center</command></action>
+      <action name="Execute"> <command>plasma-systemmonitor</command></action>
     </keybind>
     <!--
       Remove a previously defined keybind
@@ -321,27 +321,27 @@
        switching due to hitting the edge of the screen -->
 
   <context name="Frame">
-    <mousebind button="A-Left" action="Press">
+    <mousebind button="W-A-Left" action="Press">
       <action name="Focus"/>
       <action name="Raise"/>
     </mousebind>
-    <mousebind button="A-Left" action="Click">
+    <mousebind button="W-A-Left" action="Click">
       <action name="Unshade"/>
     </mousebind>
-    <mousebind button="A-Left" action="Drag">
+    <mousebind button="W-A-Left" action="Drag">
       <action name="Move"/>
     </mousebind>
 
-    <mousebind button="A-Right" action="Press">
+    <mousebind button="W-A-Right" action="Press">
       <action name="Focus"/>
       <action name="Raise"/>
       <action name="Unshade"/>
     </mousebind>
-    <mousebind button="A-Right" action="Drag">
+    <mousebind button="W-A-Right" action="Drag">
       <action name="Resize"/>
     </mousebind> 
 
-    <mousebind button="A-Middle" action="Press">
+    <mousebind button="W-A-Middle" action="Press">
       <action name="Lower"/>
       <action name="FocusToBottom"/>
       <action name="Unfocus"/>

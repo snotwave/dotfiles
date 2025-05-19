@@ -14,7 +14,8 @@ kanshi -c ~/.config/kanshi/config >/dev/null 2>&1 &
 
 # Launch a panel such as yambar or waybar.
 waybar >/dev/null 2>&1 &
-sfwbar -m DP-3>/dev/null 2>&1 &
+cairo-dock >/dev/null 2>&1 &
+#sfwbar -m DP-3>/dev/null 2>&1 &
 
 # Enable notifications. Typically GNOME/KDE application notifications go
 # through the org.freedesktop.Notifications D-Bus API and require a client such
@@ -35,6 +36,7 @@ swayidle -w \
 
 # Misc
 nm-applet >/dev/null 2>&1 &
+blueman-applet >/dev/null 2>&1 &
 ckb-next >/dev/null 2>&1 &
 steam -silent >/dev/null 2>&1 &
 vesktop >/dev/null 2>&1 &

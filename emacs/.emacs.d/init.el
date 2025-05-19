@@ -67,7 +67,7 @@
 (use-package doom-themes
   :ensure t
   :config
-  (load-theme 'doom-ir-black t)
+  (load-theme 'doom-monokai-spectrum t)
   (setq doom-themes-enable-bold t
         doom-themes-enable-italic nil)
   ;;(doom-themes-neotree-config)
@@ -98,18 +98,17 @@
   :config
   (auto-package-update-maybe))
 
-(use-package zoom
-  :config
-  (zoom-mode t)
-  (setq zoom-size '(0.6 . 0.8)))
+;; as much as zoom has served me well, i think it's time to sunset this
+;;(use-package zoom
+;;  :config
+;;  (zoom-mode f)
+;;  (setq zoom-size '(0.6 . 0.8)))
 
 
 ;;(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/haki")
 ;;(load-theme 'haki)
 ;;(set-face-attribute 'haki-region nil :background "#2e8b57" :foreground "#ffffff")
 ;;(add-hook 'post-command-hook #'haki-modal-mode-line)
-;;;; make theme transparent
-(set-frame-parameter nil 'alpha-background 95)
 
 ;;; org mode
 (use-package org
@@ -121,6 +120,16 @@
 
 (use-package org-sticky-header
   :hook (org-mode . org-sticky-header-mode))
+
+;;; pdf-tools
+(use-package pdf-tools
+  :demand t
+  :init
+  (pdf-tools-install)
+  :config
+  (add-hook 'pdf-isearch-minor-mode-hook (lambda () (ctrlf-local-mode -1)))
+  (use-package org-pdftools
+    :hook (org-mode . org-pdftools-setup-link)))
 
 ;;; autocomplete
 (use-package ivy
@@ -412,7 +421,20 @@
  '(c-basic-offset 4)
  '(inhibit-startup-screen t)
  '(package-selected-packages
-   '(deldo lsp-haskell zoom company-coq proof-general org-sticky-header org-bullets evil-org auto-package-update dashboard solaire-mode dimmer all-the-icons doom-themes smart-tabs-mode no-littering rust-mode evil-surround evil-collection latex-preview-pane elpy madhat2r-theme uwu-theme tangotango-theme utop darcula-theme timu-macos-theme yascroll neotree evil evil-mode slime-fancy slime-company company-quickhelp gnu-apl-mode dyalog-mode apl-mode zig-mode code-cells python-mode lsp-pyright merlin-eldoc merlin dune tuareg slime forth-mode company corfu-mode lsp-mode which-key rainbow-delimiters powerline ivy-rich)))
+   '(all-the-icons apl-mode auto-package-update code-cells company
+		   company-coq company-quickhelp corfu-mode
+		   darcula-theme dashboard deldo dimmer doom-themes
+		   dune dyalog-mode elpy evil evil-collection
+		   evil-mode evil-org evil-surround forth-mode
+		   gnu-apl-mode ivy-rich latex-preview-pane
+		   lsp-haskell lsp-mode lsp-pyright madhat2r-theme
+		   merlin merlin-eldoc neotree no-littering
+		   org-bullets org-pdftools org-sticky-header
+		   pdf-tools powerline proof-general python-mode
+		   rainbow-delimiters rust-mode slime slime-company
+		   slime-fancy smart-tabs-mode solaire-mode
+		   tangotango-theme timu-macos-theme tuareg utop
+		   uwu-theme which-key yascroll zig-mode zoom)))
  
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

@@ -11,7 +11,7 @@
   
   <theme>
     <name>Umbra</name>
-    <cornerRadius>8</cornerRadius>
+    <cornerRadius>1</cornerRadius>
     <font name="FiraCode" size="11" />
   </theme>
 
@@ -19,10 +19,10 @@
     <default />
     <!-- Use a different terminal emulator -->
     <keybind key="W-Return">
-      <action name="Execute" command="wezterm" />
+      <action name="Execute" command="alacritty" />
     </keybind>
     <keybind key="W-Space">
-      <action name="Execute" command="wofi --show drun" />
+      <action name="Execute" command="rofi -show drun" />
     </keybind>
     <keybind key="W-S-q">
       <action name="Close" />
@@ -103,6 +103,7 @@
         <action name="None" />
       </mousebind>
     </context>
+
   </mouse>
 
 </labwc_config>

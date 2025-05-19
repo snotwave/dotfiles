@@ -57,7 +57,7 @@
 
   <menu id="config" label="Settings">
     <item label="󰗶 Manager">
-      <action name="Execute"> <command>system-monitoring-center</command></action>
+      <action name="Execute"> <command>plasma-systemmonitor</command></action>
     </item>
     <item label="󱋆 Display">
       <action name="Execute"> <command>wdisplays</command></action>
@@ -102,7 +102,7 @@
   <separator />
   
   <item label=" Terminal">
-    <action name="Execute"> <command>wezterm</command></action>
+    <action name="Execute"> <command>alacritty</command></action>
   </item>
   
 
