@@ -18,8 +18,8 @@
         - run `opam install vscoq-language-server` for vscoq to work
 
 ## Special Keybinds
-- <F6> - activate file browser
-    - <-> to move up a level
-    - otherwise, Oil operates exactly the same as vim (every line is a file)
-- <F7> - toggle diagnostics
+- \<F6\> - activate file browser
+    - \<-\> to move up a level
+    - Oil operates exactly the same as vim (every line is a file)
+- \<F7\> - toggle diagnostics
 
