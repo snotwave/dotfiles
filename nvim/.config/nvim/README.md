@@ -16,7 +16,6 @@
     - rocq
         - run `opam install rocq` to get base rocq
         - run `opam install vscoq-language-server` for vscoq to work
-### Treesitter
 
 ## Special Keybinds
 - <F6> - activate file browser
