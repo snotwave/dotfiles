@@ -5,6 +5,7 @@ return {
         require("notify").setup {
             style = "wrapped-compact",
             stages = "static",
+            top_down = false,
         }
     end,
 }

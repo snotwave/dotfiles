@@ -261,7 +261,7 @@
 		("Kevin Ryde" . "user42_kevin@yahoo.com.au"))
 	       (:commit . "72db1f3ee04f3d1db17487d5bd98466fcbad87fd"))])
  (auth-source-xoauth2-plugin .
-			     [(0 2)
+			     [(0 2 1)
 			      ((emacs
 				(28 1))
 			       (oauth2
@@ -271,7 +271,7 @@
 			       (:authors
 				("Xiyue Deng" . "manphiz@gmail.com"))
 			       (:url . "https://elpa.gnu.org/packages/auth-source-xoauth2-plugin.html")
-			       (:commit . "df1125e031ee87163d14d44767c82af290e2710a"))])
+			       (:commit . "08c5cf49a9ce69cd2a39f65f91abfeb7f6ae7772"))])
  (auto-correct .
 	       [(1 1 4)
 		nil "Remembers and automatically fixes past corrections" tar
@@ -555,7 +555,7 @@
 	     ("Kjartan Oli Agustsson" . "kjartanoli@disroot.org"))
 	    (:commit . "855a9cb092eecf1e5c17ea56c440a0200f95eb4c"))])
  (cape .
-       [(2 0)
+       [(2 1)
 	((emacs
 	  (28 1))
 	 (compat
@@ -566,7 +566,7 @@
 	 (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	 (:authors
 	  ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	 (:commit . "2e86b6deed2844fc1345ff01bc92c3a849a33778"))])
+	 (:commit . "c9191ee9e13e86a7b40c3d25c8bf7907c085a1cf"))])
  (capf-autosuggest .
 		   [(0 3)
 		    ((emacs
@@ -657,11 +657,11 @@
 		("Augusto Stoffel" . "arstoffel@gmail.com"))
 	       (:commit . "caffb420be106cebbdfe4474ed0507a601603f83"))])
  (colorful-mode .
-		[(1 2 3)
+		[(1 2 4)
 		 ((emacs
 		   (28 1))
 		  (compat
-		   (30 0 2 0)))
+		   (30 1 0 0)))
 		 "Preview any color in your buffer in real time" tar
 		 ((:url . "https://github.com/DevelopmentCool2449/colorful-mode")
 		  (:keywords "faces" "tools" "matching" "convenience")
@@ -670,7 +670,7 @@
 		   ("Elias G. Perez" . "eg642616@gmail.com"))
 		  (:authors
 		   ("Elias G. Perez" . "eg642616@gmail.com"))
-		  (:commit . "f749116188d4be195050c2c96baf5b7899734dab"))])
+		  (:commit . "25ad453e4d4e6d9d9e9adf6ccc510231a6059483"))])
  (comint-mime .
 	      [(0 7)
 	       ((emacs
@@ -776,7 +776,7 @@
 	       ("Carsten Dominik" . "carsten.dominik@gmail.com"))
 	      (:commit . "f07e221d4d5597c7ccf4b0003c0909a88bdfcc9e"))])
  (consult .
-	  [(2 3)
+	  [(2 4)
 	   ((emacs
 	     (28 1))
 	    (compat
@@ -785,7 +785,7 @@
 	   ((:url . "https://github.com/minad/consult")
 	    (:keywords "matching" "files" "completion")
 	    (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
-	    (:commit . "48d09c200c683ffb09ad5863d5496e230b9fe3f9"))])
+	    (:commit . "e57fbb65584f3160f98a2569b1674c8065ec8df8"))])
  (consult-denote .
 		 [(0 3 1)
 		  ((emacs
@@ -838,7 +838,7 @@
 		      ("Jackson Ray Hamilton" . "jackson@jacksonrayhamilton.com"))
 		     (:commit . "1b30a28857727202d1f6a027f83ad66151fb1e92"))])
  (corfu .
-	[(2 1)
+	[(2 2)
 	 ((emacs
 	   (28 1))
 	  (compat
@@ -849,7 +849,7 @@
 	  (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	  (:authors
 	   ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	  (:commit . "6db826974963f8fb5d8b9832e7c09da2fea3296a"))])
+	  (:commit . "77e639bc6b982be09f355390beef6f200936109a"))])
  (coterm .
 	 [(1 6)
 	  ((emacs
@@ -1347,6 +1347,17 @@
 	     ("Chong Yidong" . "cyd@gnu.org"))
 	    (:url . "https://elpa.gnu.org/packages/docbook.html")
 	    (:commit . "a59f87c0dc04bcfcf9f55a124658c2e7a585dbd2"))])
+ (doric-themes .
+	       [(0 1 0)
+		((emacs
+		  (29 1)))
+		"Minimalist themes" tar
+		((:url . "https://github.com/protesilaos/doric-themes")
+		 (:keywords "faces" "theme" "accessibility")
+		 (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
+		 (:authors
+		  ("Protesilaos Stavrou" . "info@protesilaos.com"))
+		 (:commit . "88e924ea72d1a26196d418297a44e523167dfdde"))])
  (drepl .
 	[(0 3)
 	 ((emacs
@@ -1780,7 +1791,7 @@
 		   ("Magnar Sveen" . "magnars@gmail.com"))
 		  (:commit . "9e3f86c02c5e2ab6f0d95da8a34045b54f6166d1"))])
  (expreg .
-	 [(1 3 1)
+	 [(1 4 1)
 	  ((emacs
 	    (29 1)))
 	  "Simple expand region" tar
@@ -1789,7 +1800,7 @@
 	   (:maintainer "Yuan Fu" . "casouri@gmail.com")
 	   (:authors
 	    ("Yuan Fu" . "casouri@gmail.com"))
-	   (:commit . "9950c07ec90293964baa33603f4a80e764b0a847"))])
+	   (:commit . "b1dc64aef8ed8498a6d21e5e78ce7e0bda8407e0"))])
  (external-completion .
 		      [(0 1)
 		       nil "Let external tools control completion style" tar
@@ -2487,7 +2498,7 @@
 		(:url . "https://elpa.gnu.org/packages/jgraph-mode.html")
 		(:commit . "4e13f89fe8837b84d40b969e6a5431816180a747"))])
  (jinx .
-       [(2 1)
+       [(2 2)
 	((emacs
 	  (28 1))
 	 (compat
@@ -2498,7 +2509,7 @@
 	 (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	 (:authors
 	  ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	 (:commit . "84fc35aedddfbf24de144245fe9d1c8a61852f7a"))])
+	 (:commit . "1e143deb27ff9906bf93bd17bbf07e244cc7ca58"))])
  (jit-spell .
 	    [(0 4)
 	     ((emacs
@@ -2729,7 +2740,7 @@
 		      ("Sean Whitton" . "spwhitton@spwhitton.name"))
 		     (:commit . "00b8f65effe4f2673e6450d70000644b266aa78a"))])
  (llm .
-      [(0 25 0)
+      [(0 26 0)
        ((emacs
 	 (28 1))
 	(plz
@@ -2737,13 +2748,15 @@
 	(plz-event-source
 	 (0 1 1))
 	(plz-media-type
-	 (0 2 1)))
+	 (0 2 1))
+	(compat
+	 (29 1)))
        "Interface to pluggable llm backends" tar
        ((:url . "https://github.com/ahyatt/llm")
 	(:maintainer "Andrew Hyatt" . "ahyatt@gmail.com")
 	(:authors
 	 ("Andrew Hyatt" . "ahyatt@gmail.com"))
-	(:commit . "231815d24ba7a100a7a0fb72029abb2b04faa901"))])
+	(:commit . "01d789fc9d6f18bbc7441a8d63972bf38fe47b59"))])
  (lmc .
       [(1 4)
        nil "Little Man Computer in Elisp" tar
@@ -3343,9 +3356,11 @@
 		  ("Hanno Perrey" . "hanno@hoowl.se"))
 		 (:commit . "020b03f299dad438f65d7bcbf93553b273fd7c33"))])
  (org-modern .
-	     [(1 7)
+	     [(1 8)
 	      ((emacs
 		(28 1))
+	       (org
+		(9 5))
 	       (compat
 		(30)))
 	      "Modern looks for Org" tar
@@ -3354,7 +3369,7 @@
 	       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	       (:authors
 		("Daniel Mendler" . "mail@daniel-mendler.de"))
-	       (:commit . "e7a4c5e4a1d309895c60b3a3b3e62ab1f6a926b4"))])
+	       (:commit . "a58534475b4312b0920aa9d3824272470c8e3500"))])
  (org-notify .
 	     [(0 1 1)
 	      ((emacs
@@ -4719,7 +4734,7 @@
 		  (:url . "https://elpa.gnu.org/packages/track-changes.html")
 		  (:commit . "ffb7d656a2c89f86ccd2de51379de9612c7a4aa3"))])
  (tramp .
-	[(2 7 2 3 1)
+	[(2 7 2 4)
 	 ((emacs
 	   (27 1)))
 	 "Transparent Remote Access, Multiple Protocol" tar
@@ -4729,7 +4744,7 @@
 	  (:authors
 	   ("Kai Großjohann" . "kai.grossjohann@gmx.net")
 	   ("Michael Albinus" . "michael.albinus@gmx.de"))
-	  (:commit . "7ccd3818b74245cb0b4ffe1aac8b71ad2aef79a9"))])
+	  (:commit . "c37e5fa5f4e60a19b38089672fbad377035a33a2"))])
  (tramp-nspawn .
 	       [(1 0 1)
 		((emacs
@@ -5055,7 +5070,7 @@
 		  ("Wilson Snyder" . "wsnyder@wsnyder.org"))
 		 (:commit . "78bc5949db489b143f7424540d6cc56fc529c9ea"))])
  (vertico .
-	  [(2 1)
+	  [(2 2)
 	   ((emacs
 	     (28 1))
 	    (compat
@@ -5066,7 +5081,7 @@
 	    (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	    (:authors
 	     ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	    (:commit . "3e1e55319fb377a59954ebce4acf772dbb5c9b10"))])
+	    (:commit . "bb6abf63cc439601cd65682cfd549e4b6d63d409"))])
  (vertico-posframe .
 		   [(0 8 0)
 		    ((emacs
