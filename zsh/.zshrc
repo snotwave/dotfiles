@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="half-life"
+ZSH_THEME="gentoo"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -70,7 +70,7 @@ ZSH_THEME="half-life"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autocomplete zsh-autosuggestions)
+plugins=(git zsh-autosuggestions zsh-autocomplete)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -82,7 +82,7 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-export EDITOR="emacs -nw"
+export EDITOR="nvim"
 export VISUAL=EDITOR
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
@@ -107,7 +107,7 @@ export VISUAL=EDITOR
 
 alias floorp="flatpak run one.ablaze.floorp"
 
-alias gentoo-update="time (emerge --sync ^^ emerge -auDNv @world)"
+alias gentoo-update="doas ~/.gentoo-update.sh"
 
 alias ls="eza --color=always --long --git --icons=always --all"
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
